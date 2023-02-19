@@ -8,4 +8,4 @@ RUN apt-get update && apt-get install -y  \
     && docker-php-ext-install pdo_mysql
 
 RUN chown -R www-data:www-data /var/www
-RUN chmod -R 775 /var/www/storage
+RUN chmod -R 775 /var/www/storage/logs/
