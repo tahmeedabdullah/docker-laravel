@@ -7,5 +7,5 @@ RUN apt-get update && apt-get install -y  \
     && docker-php-ext-enable imagick \
     && docker-php-ext-install pdo_mysql
 
-RUN chown -R www-data:www-data /var/www
-RUN chmod -R 775 /var/www/storage/logs/
+RUN copy laravel.log /var/www/storage/logs/
+RUN chown -R www-data:www-data /var/www/
